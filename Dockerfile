@@ -26,7 +26,6 @@ RUN   apt-get update && \
 RUN   apt-get install -y emacs
 
 RUN mkdir /app && \
-    mkdir /app/bin && \
     cd /app && \
     git clone https://github.com/guitarvydas/vsh.git && \
     git clone https://github.com/guitarvydas/d2f.git && \
@@ -38,6 +37,6 @@ RUN cd /app && \
     npm install pako \
     npm install ohm-js
     
-ENV PATH="/app/bin:${PATH}"
+ENV PATH="/app/appbin:${PATH}"
 
 ENTRYPOINT ["/bin/bash"]

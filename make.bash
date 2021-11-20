@@ -9,7 +9,7 @@
 
 docker rmi -f pt2
 cwd=`pwd`
-cd ~/quicklisp/local-project/pfr
+cd ~/quicklisp/local-projects/pfr
 git pull
 cd ${cwd}
 docker build -t pt2 .
